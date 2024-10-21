@@ -7,7 +7,6 @@ return {
       no_italic = true,
     },
   },
-  -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
       opts = {
