@@ -7,3 +7,6 @@
 vim.keymap.set("n", "<leader>rn", function()
   return ":IncRename " .. vim.fn.expand("<cword>")
 end, { expr = true })
+
+-- keymap have same features with "<C-w>d"
+vim.keymap.del("n", "<C-w><C-D>")
