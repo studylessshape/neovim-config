@@ -1,10 +1,17 @@
+local not_android = string.find(vim.uv.os_uname().release, "android") == nil;
+
 return {
   {
     "neovim/nvim-lspconfig",
-    -- disable the notic that lua_ls install failed
-    enabled = false,
     opts = {
-      servers = {}
+      servers = {
+        lua_ls = {
+          enabled = not_android,
+        },
+        nil_ls = {
+          enabled = not_android,
+        },
+      },
     },
   },
 }
